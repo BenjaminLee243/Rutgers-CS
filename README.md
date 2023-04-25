@@ -1,5 +1,5 @@
 # Rutgers-CS
-Rutgers CS classes I have taken over the years
+Rutgers Computer Science classes I have taken over the years
 
 Included in this repo:
 
