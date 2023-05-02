@@ -1,0 +1,171 @@
+Test-1 for key function
+((a p p l e)   104138946467)
+((i n q u i r y)  87592868696910)
+((d i p l o m a t i c) 2135978992990674775)
+((a u t o n o m y)  2540190336166329)
+((m i c r o p h o n e) 2136010426490741877)
+
+Test-2 for div-hash-1
+# hash function used
+(define hash-1 (gen-hash-division-method 70111))
+
+# test input and expected output
+((f e d d e r s) 67121)
+((f a s c i n a t e s) 53219)
+((d e m i s e) 25833)
+((p a i n t i n g s) 28826)
+((h a u s d o r f f) 41921)
+((r h o d e s) 11040)
+((p l e n t i f u l) 23723)
+((w a n t o n l y) 14217)
+((u n r a v e l s) 22916)
+((b r e a c h e d) 6278)
+
+Test-3 div-hash-2
+# hash function used
+(define hash-2 (gen-hash-division-method 16057))
+
+# test input and expected output
+
+((g r o w l) 4408)
+((a d v i s i n g) 4066)
+((c l a r e n d o n) 2033)
+((p l a t o n i s m) 4973)
+((c r o s b y) 608)
+((w e a r i l y) 3997)
+((p u n y) 2514)
+((b o y s) 9756)
+((e r i c h) 6255)
+((c a r e s) 6382)
+
+Test-4 mult-hash-1
+# hash function used
+(define hash-3 (gen-hash-multiplication-method 7221))
+
+# test input and expected output
+((c o m p t r o l l e r) 0.0)
+((h i r e y) 3349.0)
+((b a u h a u s) 1128.0)
+((s l a y e r) 2723.0)
+((j u m p e d) 7049.0)
+((b u n c h) 2761.0)
+((p r o g r a m m e r) 0.0)
+((b u f f e t e d) 1805.0)
+((g o v e r n m e n t a l l y) 0.0)
+((o u t s) 4091.0)
+
+Test-5 mult-hash-2
+# hash function used
+(define hash-4 (gen-hash-multiplication-method 911))
+
+# test input and expected output
+((p a r t i c i p a t e) 0.0)
+((e i g h t e e n t h) 0.0)
+((d e r o g a t o r y) 0.0)
+((e q u a t e) 548.0)
+((s i t s) 325.0)
+((q u a h o g) 376.0)
+((p e e r) 377.0)
+((j o y o u s l y) 455.0)
+((m o u t h s) 20.0)
+((n a i l e d) 353.0)
+
+Test-6 simple-1hash-checker
+# checker used
+(define hash-1 (gen-hash-division-method 70111))
+(define hashfl-1 (list hash-1))
+(define checker-1 (gen-checker hashfl-1 dictionary))
+
+# test words and expected results
+((a p p l e) #t)
+((a p p l e x) #f)
+
+Test-7 1hash-checker
+# checker used
+(define hash-1 (gen-hash-division-method 70111))
+(define hashfl-1 (list hash-1))
+(define checker-1 (gen-checker hashfl-1 dictionary))
+
+# test words and expected results
+((p a y o f f s) #t)
+((r e a d j u s t e d) #t)
+((o u t l a s t) #t)
+((r e s u r r e c t i o n s) #t)
+((p l a n e r s) #t)
+((b u r n e d) #t)
+((r e c e d i n g) #t)
+((i n s u p p o r t a b l e) #t)
+((u n i v e r s i t y) #t)
+((t r a n s l a t i o n a l) #t)
+
+((c i o l a a n n f r i) #t)
+((s q u c e i l) #f)
+((r e r p e a) #f)
+((s n c u c e r c e o r) #f)
+((i g v a n w) #f)
+((e a s i l t e i r) #t)
+((i e l t t v) #t)
+((c b u e u a r r y c a) #t)
+((p l i i m r c o n a g) #f)
+((e e l r u d n t a) #f)
+
+Test-8 4hash-checker
+Same as 6, but use four hash functions
+# checker used
+(define hash-1 (gen-hash-division-method 70111))
+(define hash-2 (gen-hash-division-method 89997))
+(define hash-3 (gen-hash-multiplication-method 7221))
+(define hash-4 (gen-hash-multiplication-method 900))
+(define hashfl-1 (list hash-1 hash-2 hash-3 hash-4))
+(define checker-1 (gen-checker hashfl-1 dictionary))
+
+((w o n d e r f u l) #t)
+((d i s p e n s a t i o n) #t)
+((v i l l a s) #t)
+((w e n d e l l) #t)
+((a p h a s i c) #t)
+((t e n s e n e s s) #t)
+((i n t e r v i e w s) #t)
+((c y b e r n e t i c) #t)
+((r a i n s t o r m) #t)
+((d o r i c i z e s) #t)
+((e x p o r t s) #t)
+((g u i l d e r) #t)
+((q u o t e d) #t)
+((s i n c l a i r) #t)
+((u n f o r g i v i n g) #t)
+((b u l k e d) #t)
+((b r i g h t o n) #t)
+((l u s t) #t)
+((b r e w e r) #t)
+((s c e n e) #t)
+
+((s l c o s d) #f)
+((s r t k s o) #f)
+((c n o o n j e i d) #f)
+((l d g e r i i n b e y l w) #t)
+((w n l o e u f d l r y) #f)
+((s e o m o p c) #t)
+((y i l s a e b o n b z) #t)
+((e e a t t d i m i v) #t)
+((r e s h r e c a) #f)
+((n e u i l c x g d) #t)
+((i l o e s v v o) #f)
+((g n c a o l i i) #t)
+((i s o t e p e n p r c) #f)
+((t e h h a) #f)
+((r e s e o p) #f)
+((e n n i s m o t n i t r u a t) #t)
+((a g c i h n k) #t)
+((p s i n a n e r t r s a e c) #f)
+((d r e n l e b) #f)
+
+Test-9 checker-efficiency (Implementation is considered correct if finishes within 120 seconds)
+# program is timed from bash with `timeout` command
+(define (firsts number lst)
+  (if (equal? 0 number)
+      '()
+      (cons (car lst)
+            (firsts (- number 1) (cdr lst)))))
+
+(map checker-1 (firsts 10000 dictionary)) 
